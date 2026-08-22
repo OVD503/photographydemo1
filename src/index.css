@@ -1,0 +1,404 @@
+/* Custom CSS for Siddharth Arora Photography Portfolio */
+/* Design style: High-contrast, bold typography, Neobrutalist/Comic layout, Orange-Red accents */
+
+:root {
+  --color-bg-dark: #090909;
+  --color-bg-light: #f6f6f6;
+  --color-accent: #ff3e24; /* Bold vermilion red from reference */
+  --color-accent-hover: #e22d14;
+  --color-text-light: #ffffff;
+  --color-text-dark: #121212;
+  --color-text-muted: #888888;
+  --border-thick: 4px solid #121212;
+  --border-thin: 2px solid #121212;
+  
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  
+  --shadow-flat: 8px 8px 0px #121212;
+  --shadow-flat-small: 4px 4px 0px #121212;
+  --shadow-flat-accent: 8px 8px 0px var(--color-accent);
+  --shadow-flat-white: 8px 8px 0px #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg-dark);
+  font-family: var(--font-body);
+  color: var(--color-text-light);
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border: 2px solid var(--color-bg-dark);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-hover);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+/* Ripped Paper Dividers */
+/* Jagged Ripped Edge Top */
+.ripped-divider-top {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'><path d='M0,40 L40,12 L85,34 L130,15 L180,35 L220,14 L270,37 L315,13 L360,36 L410,17 L460,35 L500,12 L550,34 L600,15 L640,36 L690,14 L730,34 L780,16 L820,35 L870,12 L920,33 L970,15 L1010,36 L1060,13 L1100,34 L1150,16 L1200,35 L1240,12 L1290,34 L1340,15 L1390,35 L1440,12 L1440,40 Z' fill='%23f6f6f6'/></svg>");
+  background-size: 100% 100%;
+  margin-top: -39px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.ripped-divider-top.dark {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'><path d='M0,40 L40,12 L85,34 L130,15 L180,35 L220,14 L270,37 L315,13 L360,36 L410,17 L460,35 L500,12 L550,34 L600,15 L640,36 L690,14 L730,34 L780,16 L820,35 L870,12 L920,33 L970,15 L1010,36 L1060,13 L1100,34 L1150,16 L1200,35 L1240,12 L1290,34 L1340,15 L1390,35 L1440,12 L1440,40 Z' fill='%23090909'/></svg>");
+}
+
+.ripped-divider-top.accent {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'><path d='M0,40 L40,12 L85,34 L130,15 L180,35 L220,14 L270,37 L315,13 L360,36 L410,17 L460,35 L500,12 L550,34 L600,15 L640,36 L690,14 L730,34 L780,16 L820,35 L870,12 L920,33 L970,15 L1010,36 L1060,13 L1100,34 L1150,16 L1200,35 L1240,12 L1290,34 L1340,15 L1390,35 L1440,12 L1440,40 Z' fill='%23ff3e24'/></svg>");
+}
+
+/* Jagged Ripped Edge Bottom */
+.ripped-divider-bottom {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'><path d='M0,0 L40,28 L85,6 L130,25 L180,5 L220,26 L270,3 L315,27 L360,4 L410,23 L460,5 L500,28 L550,6 L600,25 L640,4 L690,26 L730,6 L780,24 L820,5 L870,28 L920,7 L970,25 L1010,4 L1060,27 L1100,6 L1150,24 L1200,5 L1240,28 L1290,6 L1340,25 L1390,5 L1440,28 L1440,0 Z' fill='%23f6f6f6'/></svg>");
+  background-size: 100% 100%;
+  margin-bottom: -39px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.ripped-divider-bottom.dark {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'><path d='M0,0 L40,28 L85,6 L130,25 L180,5 L220,26 L270,3 L315,27 L360,4 L410,23 L460,5 L500,28 L550,6 L600,25 L640,4 L690,26 L730,6 L780,24 L820,5 L870,28 L920,7 L970,25 L1010,4 L1060,27 L1100,6 L1150,24 L1200,5 L1240,28 L1290,6 L1340,25 L1390,5 L1440,28 L1440,0 Z' fill='%23090909'/></svg>");
+}
+
+.ripped-divider-bottom.accent {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'><path d='M0,0 L40,28 L85,6 L130,25 L180,5 L220,26 L270,3 L315,27 L360,4 L410,23 L460,5 L500,28 L550,6 L600,25 L640,4 L690,26 L730,6 L780,24 L820,5 L870,28 L920,7 L970,25 L1010,4 L1060,27 L1100,6 L1150,24 L1200,5 L1240,28 L1290,6 L1340,25 L1390,5 L1440,28 L1440,0 Z' fill='%23ff3e24'/></svg>");
+}
+
+/* Tape Photo Framing */
+.taped-photo-container {
+  position: relative;
+  padding: 20px 20px 30px 20px;
+  background-color: #ffffff;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-flat);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.taped-photo-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: var(--border-thin);
+  object-fit: cover;
+}
+
+/* Semi-transparent tape graphic overlay */
+.taped-photo-container::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 110px;
+  height: 32px;
+  background-color: rgba(24cf, 240, 220, 0.6); /* Frosted off-white/yellow masking tape */
+  background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 2px, transparent 2px, transparent 4px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(1px);
+  border-left: 1px dashed rgba(0, 0, 0, 0.15);
+  border-right: 1px dashed rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.taped-photo-container.tape-top-left::before {
+  left: 15%;
+  transform: rotate(-15deg);
+}
+
+.taped-photo-container.tape-top-right::before {
+  left: 85%;
+  transform: rotate(15deg);
+}
+
+.taped-photo-container.tape-double::before {
+  display: none;
+}
+.taped-photo-container.tape-double::after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 10%;
+  transform: rotate(-15deg);
+  width: 70px;
+  height: 25px;
+  background-color: rgba(240, 240, 240, 0.7);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-left: 1px dashed rgba(0, 0, 0, 0.1);
+  border-right: 1px dashed rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.taped-photo-container.tape-double-second::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  right: 10%;
+  left: auto;
+  transform: rotate(15deg);
+  width: 70px;
+  height: 25px;
+  background-color: rgba(240, 240, 240, 0.7);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-left: 1px dashed rgba(0, 0, 0, 0.1);
+  border-right: 1px dashed rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Photo Rotations & Hover Animations */
+.tilt-left {
+  transform: rotate(-2.5deg);
+}
+.tilt-right {
+  transform: rotate(3deg);
+}
+.tilt-slight {
+  transform: rotate(1.2deg);
+}
+
+.taped-photo-container:hover {
+  transform: rotate(0deg) scale(1.03);
+  box-shadow: 12px 12px 0px #121212;
+  z-index: 20;
+}
+
+/* Neobrutalist buttons */
+.btn-brutal {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-flat-small);
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-brutal:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #121212;
+  background-color: var(--color-accent-hover);
+}
+
+.btn-brutal:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #121212;
+}
+
+.btn-brutal.white {
+  background-color: #ffffff;
+  color: var(--color-text-dark);
+}
+.btn-brutal.white:hover {
+  background-color: #e6e6e6;
+}
+
+.btn-brutal.dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+}
+.btn-brutal.dark:hover {
+  background-color: #222;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(-1.5deg); }
+  50% { transform: translateY(-8px) rotate(-0.5deg); }
+  100% { transform: translateY(0px) rotate(-1.5deg); }
+}
+
+@keyframes float-opposite {
+  0% { transform: translateY(0px) rotate(2deg); }
+  50% { transform: translateY(-10px) rotate(3.5deg); }
+  100% { transform: translateY(0px) rotate(2deg); }
+}
+
+.animate-float-1 {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-float-2 {
+  animation: float-opposite 7s ease-in-out infinite;
+}
+
+/* Responsive Grid Adjustments */
+.grid-brutal {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .grid-brutal {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-brutal {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Page Layout Wrappers */
+.section-dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  padding: 5rem 1.5rem;
+  position: relative;
+}
+
+.section-light {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  padding: 5rem 1.5rem;
+  position: relative;
+}
+
+.section-accent {
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  padding: 5rem 1.5rem;
+  position: relative;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Sub-category Pill Tags */
+.category-pill {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  color: var(--color-text-dark);
+  border: var(--border-thin);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin: 6px;
+  box-shadow: var(--shadow-flat-small);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.category-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px #121212;
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+}
+
+.category-pill.active {
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+}
+
+/* Contact Inputs styling */
+.input-brutal {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border: var(--border-thick);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-dark);
+  box-shadow: var(--shadow-flat-small);
+  outline: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-brutal:focus {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--color-accent);
+}
+
+.label-brutal {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  color: inherit;
+  letter-spacing: 0.05em;
+}
+
+/* Image tape decoration separate elements */
+.hanging-tape-pic {
+  position: absolute;
+  width: 120px;
+  transform: rotate(-10deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  border: 2px solid white;
+  z-index: 5;
+  transition: transform 0.3s ease;
+}
+.hanging-tape-pic::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  width: 50px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(1px);
+  transform: rotate(5deg);
+  border-left: 1px dashed rgba(0,0,0,0.1);
+  border-right: 1px dashed rgba(0,0,0,0.1);
+}
+.hanging-tape-pic:hover {
+  transform: scale(1.1) rotate(0deg);
+  z-index: 30;
+}
